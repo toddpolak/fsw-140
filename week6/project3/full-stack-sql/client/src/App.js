@@ -12,12 +12,14 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='container'>
       <h1>Animals</h1>
         {animalList.map((val, index) => {
           return <div key={index}>
-              <h2>{val.type}</h2>
-              <img src={val.img_url} alt='' />
+              <h3>{val.type}</h3>
+              <div className='img-area'>
+                <img src={val.img_url} alt='' />
+              </div>
             </div>
         })}
     </div>

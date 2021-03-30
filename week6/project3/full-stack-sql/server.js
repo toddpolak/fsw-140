@@ -4,7 +4,6 @@ const app = express()
 const mysql = require('mysql2')
 const cors = require('cors')
 
-//app.use('/', express.json())
 app.use(morgan('dev'))
 app.use(cors())
 
@@ -22,7 +21,6 @@ app.get('/api/get', (req, res) => {
     })
 })
 
-// Server Listen
 app.listen(9000, () => {
     console.log('The server is listening on port 9000!');
 })

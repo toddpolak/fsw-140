@@ -1,0 +1,27 @@
+body {
+    background-color: lightslategray;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    width: 700px;
+    margin: auto;
+    border: 2px solid lightgray;
+}
+
+.img-area {
+    text-align: center;
+}
+
+img {
+    width: 80%;
+    height: auto;
+}
