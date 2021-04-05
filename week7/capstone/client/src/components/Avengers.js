@@ -15,15 +15,12 @@ export default function Avengers(props) {
         <div>
             <h1>Avengers</h1>
                 {avengerList.map((val, index) => {
-                return <div key={index}>
+                return <div className='avengers-list' key={index}>
                     <h2>{val.name}</h2>
-
                     <a href={`${val.url}`} 
                         target='_blank' 
                         rel="noopener noreferrer">View</a>
-
                     <h3>{val.notes}</h3>
-
                     </div>
                 })}
         </div>

@@ -1,12 +1,9 @@
 body {
     background-color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    text-align: center;
-}
-
-h3 {
     text-align: center;
 }
 
@@ -31,4 +28,19 @@ h3 {
 img {
     width: 80%;
     height: auto;
+}
+
+.home-page {
+    height: 600px;
+}
+
+.home-page-img {
+    text-align: center;
+}
+
+.avengers-list {
+    border: 1px solid black;
+    width: 550px;
+    margin: auto;
+    padding: 10px;
 }
