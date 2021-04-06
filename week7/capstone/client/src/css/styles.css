@@ -38,9 +38,39 @@ img {
     text-align: center;
 }
 
+.page {
+    padding: 20px;
+    border: 1px solid black;
+    background-color: rgb(133, 127, 127);
+}
+
 .avengers-list {
     border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
     width: 550px;
     margin: auto;
     padding: 10px;
+}
+
+.paging {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.pagenumbers {
+    background-color: white;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.page-item {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
 }

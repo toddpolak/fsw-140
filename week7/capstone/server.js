@@ -21,20 +21,6 @@ app.get('/api/get', (req, res) => {
     })
 })
 
-app.get('/api/get/sort/male', (req, res) => {
-    const sqlSelect = 'select * from avengers where gender = "MALE"'
-    db.query(sqlSelect, (err, result) => {
-        return res.status(200).send(result)
-    })
-})
-
-app.get('/api/get/sort/female', (req, res) => {
-    const sqlSelect = 'select * from avengers where gender = "FEMALE"'
-    db.query(sqlSelect, (err, result) => {
-        return res.status(200).send(result)
-    })
-})
-
 app.listen(9000, () => {
     console.log('The server is listening on port 9000!');
 })
