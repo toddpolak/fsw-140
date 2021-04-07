@@ -38,6 +38,7 @@ img {
 
 .home-page-img {
     text-align: center;
+    padding: 20px;
 }
 
 .home-info-container {
@@ -48,6 +49,7 @@ img {
 }
 
 .home-info {
+    font-size: large;
     padding: 20px;
     text-align: left;
     border: 1px solid lightgrey;
@@ -69,6 +71,10 @@ img {
     width: 550px;
     margin: auto;
     padding: 10px;
+}
+
+.avengers-list a {
+    font-size: larger;
 }
 
 .paging {
