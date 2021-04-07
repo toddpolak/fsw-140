@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import Pagination from './Pagination'
 import axios from 'axios'
+import logo from '../img/logo.png'
 
 export default function Avengers(props) {
     const [ avengerList, setAvengerList ] = useState([])
-
     const [ currentPage, setCurrentPage ] = useState(1)
-    const [ itemsPerPage ] = useState(5)
+    const [ itemsPerPage ] = useState(10)
 
     useEffect(() => {
         axios.get('http://localhost:9000/api/get')
@@ -25,27 +25,30 @@ export default function Avengers(props) {
         <div>
             <div className='page'>
                 <div>
-                    <h1>Avengers</h1>
+                    <img src={logo} alt='' />
                 </div>
                 <Pagination 
                         itemsPerPage={itemsPerPage} 
                         totalItems={avengerList.length} 
-                        paginate={paginate} />
-
-
+                        paginate={paginate}
+                        currentPage={currentPage} />
+                <div className='space'></div>
                 {currentItems.map((val, index) => {
                     return <div className='avengers-list' key={index}>
-                                <h2>{val.name}</h2>
                                 <a href={`${val.url}`} 
                                     target='_blank' 
-                                    rel="noopener noreferrer">View</a>
-                                <h3>{val.notes}</h3>
+                                    rel="noopener noreferrer">{val.name}</a>
+                                <div>
+                                    {val.notes !== 'NA' ? val.notes : ''}
+                                </div>
                             </div>
                 })}
+                <div className='space'></div>
                 <Pagination 
                     itemsPerPage={itemsPerPage} 
                     totalItems={avengerList.length} 
-                    paginate={paginate} />
+                    paginate={paginate}
+                    currentPage={currentPage} />
             </div>
         </div>
     )
