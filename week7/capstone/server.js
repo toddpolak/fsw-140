@@ -2,10 +2,10 @@ const express = require('express')
 const morgan = require('morgan')
 const app = express()
 const mysql = require('mysql2')
-const cors = require('cors')
+//const cors = require('cors')
 
 app.use(morgan('dev'))
-app.use(cors())
+//app.use(cors())
 
 const db = mysql.createConnection({
     host: 'localhost',
